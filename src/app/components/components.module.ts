@@ -5,6 +5,8 @@ import { TabsComponent } from './tabs/tabs.component';
 import { IonicModule } from '@ionic/angular';
 import { PeopleComponent } from './people/people.component';
 import { TabsMessagesComponent } from './tabs-messages/tabs-messages.component';
+import { CallsComponent } from './calls/calls.component';
+import { ChatsComponent } from './chats/chats.component';
 
 
 
@@ -13,7 +15,9 @@ import { TabsMessagesComponent } from './tabs-messages/tabs-messages.component';
     PostComponent,
     TabsComponent,
     PeopleComponent,
-    TabsMessagesComponent
+    TabsMessagesComponent,
+    CallsComponent,
+    ChatsComponent
   ],
   imports: [
     CommonModule
@@ -22,7 +26,9 @@ import { TabsMessagesComponent } from './tabs-messages/tabs-messages.component';
     PostComponent,
     TabsComponent,
     PeopleComponent,
-    TabsMessagesComponent
+    TabsMessagesComponent,
+    CallsComponent,
+    ChatsComponent
   ]
 })
 export class ComponentsModule { }

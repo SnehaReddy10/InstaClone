@@ -1,15 +1,18 @@
 <ion-tabs>
   <ion-tab-bar slot="top">
-    <ion-tab-button tab="chats">
+    <ion-tab-button tab="chats" (click)="chatClicked()">
       <ion-label> Chats  </ion-label>
     </ion-tab-button>
 
-    <ion-tab-button tab="calls">
+    <ion-tab-button tab="calls" (click)="callsClicked()">
       <ion-label> Calls  </ion-label>
     </ion-tab-button>
 
-    <ion-tab-button tab="requests">
+    <ion-tab-button tab="requests" (click)="requestsClicked()">
       <ion-label> Requests  </ion-label>
     </ion-tab-button>
   </ion-tab-bar>
 </ion-tabs>
+
+<app-chats *ngIf="chat"></app-chats>
+<app-calls *ngIf="calls"></app-calls>

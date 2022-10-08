@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-post',
@@ -21,7 +22,7 @@ export class PostComponent implements OnInit {
     color: 'dark'
   };
 
-  constructor() { }
+  constructor(private navCtrl: NavController) { }
 
   ngOnInit() {}
 
@@ -46,6 +47,9 @@ export class PostComponent implements OnInit {
       this.bookmarked = false;
       this.bookmark.name = 'bookmark-outline'
     }
-   
+  }
+
+  goToComments(){
+      this.navCtrl.navigateForward("/comments")
   }
 }

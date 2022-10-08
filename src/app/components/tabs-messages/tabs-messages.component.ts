@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tabs-messages',
@@ -7,8 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TabsMessagesComponent implements OnInit {
 
-  constructor() { }
+  chat: boolean = false;
+  calls: boolean = false;
+
+  constructor(private navCtrl: NavController) { }
 
   ngOnInit() {}
+
+  chatClicked(){
+    this.calls = false;
+    this.chat = true;
+  }
+
+  callsClicked(){
+    this.calls = true;
+    this.chat = false;
+  }
+
+  requestsClicked(){
+    this.navCtrl.navigateForward('message-requests')
+  }
 
 }

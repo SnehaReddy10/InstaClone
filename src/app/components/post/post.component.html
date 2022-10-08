@@ -11,19 +11,19 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="container">
 
   <!-- post -->
   <ion-img class="postPic" src="https://th.bing.com/th/id/OIP.pMg8F2rzkZJ0c_HpqT3HXAHaFj?w=244&h=184&c=7&r=0&o=5&dpr=1.6&pid=1.7"></ion-img>
 
 
   <!-- post-icons -->
-  <ion-item lines="none" class="ion-no-padding">
+  <ion-item lines="none">
     <ion-row>
     <ion-col size="4">
       <ion-icon (click)="changeHeart()" class="postIcons" [name]="heart.name" [color]="heart.color"></ion-icon>
     </ion-col>
-    <ion-col size="4" [routerLink]="['/', 'comments']">
+    <ion-col size="4" (click)="goToComments()">
       <ion-icon class="postIcons" name="chatbubble-outline"></ion-icon>
     </ion-col>
     <ion-col size="4">
