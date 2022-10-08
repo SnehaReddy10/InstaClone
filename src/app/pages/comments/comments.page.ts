@@ -1,16 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-post',
-  templateUrl: './post.component.html',
-  styleUrls: ['./post.component.scss'],
+  selector: 'app-comments',
+  templateUrl: './comments.page.html',
+  styleUrls: ['./comments.page.scss'],
 })
-export class PostComponent implements OnInit {
-  
+export class CommentsPage implements OnInit {
+
   liked: boolean = false;
-  img: {
-    imgSrc: 'https://th.bing.com/th/id/OIP.1moOVABLsAl172i_UsaCMQHaF5?pid=ImgDet&rs=1'
-  };
   heart: any = {
     name: 'heart-outline',
     color: 'dark'
@@ -18,7 +15,8 @@ export class PostComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
   changeHeart(){
     if(!this.liked){
@@ -30,6 +28,5 @@ export class PostComponent implements OnInit {
       this.heart.name = 'heart-outline',
       this.heart.color = 'dark'
     }
-   
   }
 }

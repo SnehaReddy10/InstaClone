@@ -21,7 +21,7 @@
       <ion-icon (click)="changeHeart()" class="postIcons" [name]="heart.name" [color]="heart.color"></ion-icon>
     </ion-col>
     <ion-col size="4">
-      <ion-icon class="postIcons" name="chatbubble-outline"></ion-icon>
+      <ion-icon [routerLink]="['/', 'comments']" class="postIcons" name="chatbubble-outline"></ion-icon>
     </ion-col>
     <ion-col size="4">
       <ion-icon class="postIcons" name="navigate-outline"></ion-icon>

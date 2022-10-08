@@ -1,0 +1,100 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon [routerLink]="['/', 'tabs', 'home']" class="icon-only" slot="start" name="arrow-back-outline"></ion-icon>
+
+    <ion-title>
+      <span>Comments</span>
+    </ion-title>
+
+    <ion-icon slot="end" class="icon-only" color="dark" name="navigate-outline" (click)="navigateToMessages()"></ion-icon>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item lines="full">
+    <ion-avatar>
+      <ion-img class="story" src="https://th.bing.com/th/id/OIP.WB62eaUDV-0wrQ11RAgexgHaJQ?w=186&h=233&c=7&r=0&o=5&dpr=1.6&pid=1.7"></ion-img>
+    </ion-avatar>
+    <p>
+      <span>harsha</span>
+      description
+    </p>
+  </ion-item>
+  <ion-list lines="none">
+    <ion-item>
+      <ion-avatar>
+        <ion-img class="story" src="https://th.bing.com/th/id/OIP.WB62eaUDV-0wrQ11RAgexgHaJQ?w=186&h=233&c=7&r=0&o=5&dpr=1.6&pid=1.7"></ion-img>
+      </ion-avatar>
+      <p>
+        <span>harsha</span>
+        description
+        <ion-label> 
+          <ion-note>2h</ion-note> 
+          <ion-note>Like</ion-note> 
+          <ion-note>Reply</ion-note> 
+          <ion-note>Send</ion-note> 
+        </ion-label>
+
+      </p>
+      <ion-icon slot="end" (click)="changeHeart()" class="postIcons" [name]="heart.name" [color]="heart.color"></ion-icon>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar>
+        <ion-img class="story" src="https://th.bing.com/th/id/OIP.WB62eaUDV-0wrQ11RAgexgHaJQ?w=186&h=233&c=7&r=0&o=5&dpr=1.6&pid=1.7"></ion-img>
+      </ion-avatar>
+      <p>
+        <span>harsha</span>
+        description
+        <ion-label> 
+          <ion-note>2h</ion-note> 
+          <ion-note>Like</ion-note> 
+          <ion-note>Reply</ion-note> 
+          <ion-note>Send</ion-note> 
+        </ion-label>
+
+      </p>
+      <ion-icon slot="end" (click)="changeHeart()" class="postIcons" [name]="heart.name" [color]="heart.color"></ion-icon>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar>
+        <ion-img class="story" src="https://th.bing.com/th/id/OIP.WB62eaUDV-0wrQ11RAgexgHaJQ?w=186&h=233&c=7&r=0&o=5&dpr=1.6&pid=1.7"></ion-img>
+      </ion-avatar>
+      <p>
+        <span>harsha</span>
+        description
+        <ion-label> 
+          <ion-note>2h</ion-note> 
+          <ion-note>Like</ion-note> 
+          <ion-note>Reply</ion-note> 
+          <ion-note>Send</ion-note> 
+        </ion-label>
+
+      </p>
+      <ion-icon slot="end" (click)="changeHeart()" class="postIcons" [name]="heart.name" [color]="heart.color"></ion-icon>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar>
+        <ion-img class="story" src="https://th.bing.com/th/id/OIP.WB62eaUDV-0wrQ11RAgexgHaJQ?w=186&h=233&c=7&r=0&o=5&dpr=1.6&pid=1.7"></ion-img>
+      </ion-avatar>
+      <p>
+        <span>harsha</span>
+        description
+        <ion-label> 
+          <ion-note>2h</ion-note> 
+          <ion-note>Like</ion-note> 
+          <ion-note>Reply</ion-note> 
+          <ion-note>Send</ion-note> 
+        </ion-label>
+
+      </p>
+      <ion-icon slot="end" (click)="changeHeart()" class="postIcons" [name]="heart.name" [color]="heart.color"></ion-icon>
+    </ion-item>
+    
+  </ion-list>
+
+</ion-content>
