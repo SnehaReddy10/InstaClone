@@ -6,7 +6,7 @@
 
     </ion-title>
     <ion-icon class="icon-only" slot="end" name="add-circle-outline"></ion-icon>
-    <ion-icon slot="end" class="icon-only" color="dark" name="navigate-outline"></ion-icon>
+    <ion-icon [routerLink]="['/', 'messages']" slot="end" class="icon-only" color="dark" name="navigate-outline" (click)="navigateToMessages()"></ion-icon>
     <ion-badge slot="end" class="badge" color="danger">2</ion-badge>
 
 

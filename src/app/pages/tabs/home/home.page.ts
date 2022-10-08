@@ -50,4 +50,8 @@ export class HomePage implements OnInit {
     this.result = JSON.stringify(result, null, 2);
   }
 
+  navigateToMessages(){
+
+  }
+
 }

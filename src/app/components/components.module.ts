@@ -4,6 +4,7 @@ import { PostComponent } from './post/post.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { IonicModule } from '@ionic/angular';
 import { PeopleComponent } from './people/people.component';
+import { TabsMessagesComponent } from './tabs-messages/tabs-messages.component';
 
 
 
@@ -11,7 +12,8 @@ import { PeopleComponent } from './people/people.component';
   declarations: [
     PostComponent,
     TabsComponent,
-    PeopleComponent
+    PeopleComponent,
+    TabsMessagesComponent
   ],
   imports: [
     CommonModule
@@ -19,7 +21,8 @@ import { PeopleComponent } from './people/people.component';
   exports: [
     PostComponent,
     TabsComponent,
-    PeopleComponent
+    PeopleComponent,
+    TabsMessagesComponent
   ]
 })
 export class ComponentsModule { }
