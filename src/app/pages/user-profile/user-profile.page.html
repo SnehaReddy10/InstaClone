@@ -1,0 +1,88 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon [routerLink]="['/', 'tabs', 'home']" class="icon-only" slot="start" name="arrow-back-outline"></ion-icon>
+
+    <ion-title>
+      <span>be-like-bro</span>
+    </ion-title>
+
+    <ion-icon class="icon-only" slot="end" name="notifications-outline"></ion-icon>
+
+    <ion-icon class="toolbar-icons" slot="end" name="ellipsis-vertical"></ion-icon>
+
+  </ion-toolbar>
+</ion-header> 
+
+<ion-content>
+
+  <!--profile pic followers-->
+  <ion-row>
+    <ion-col size="3">
+      <ion-avatar>
+        <ion-img src="https://th.bing.com/th/id/OIP.1moOVABLsAl172i_UsaCMQHaF5?pid=ImgDet&rs=1"></ion-img>
+      </ion-avatar>
+    </ion-col>
+    <ion-col size="3" class="ion-text-center">
+      <h3>0</h3>
+      <ion-label>Posts</ion-label>
+    </ion-col>
+    <ion-col size="3" class="ion-text-center">
+      <h3>54</h3>
+      <ion-label>Followers</ion-label>
+    </ion-col>
+    <ion-col size="3" class="ion-text-center">
+      <h3>64</h3>
+      <ion-label>Following</ion-label>
+    </ion-col>
+  </ion-row>
+
+  <!--bio-->
+  <ion-label>
+    _siri_12 <br>
+    Abnormal
+  </ion-label>
+
+  <!--edit profile and add friend-->
+  <ion-buttons class="ion-margin-top ion-margin-bottom">
+    <ion-button class="editProfileBtn ion-text-nowrap">Following 
+      <ion-icon name="chevron-down-outline"></ion-icon>
+    </ion-button>
+    <ion-button class="editProfileBtn">Message</ion-button>
+    <ion-button class="editProfileBtn">Email</ion-button>
+    <ion-button class="addFriendBtn"> 
+      <ion-icon name="person-add"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+
+
+  <!--highlights-->
+  <p>  
+    <span>Story highlights</span> <br>
+    Keep your favorite stories on your profile
+  </p>
+ <ion-row>
+  <ion-col size="3">
+    <ion-avatar>
+      <ion-img class="story" src="https://th.bing.com/th/id/OIP.WB62eaUDV-0wrQ11RAgexgHaJQ?w=186&h=233&c=7&r=0&o=5&dpr=1.6&pid=1.7"></ion-img>
+    </ion-avatar>
+  </ion-col>
+  <ion-col size="3">
+    <ion-avatar>
+      <ion-img class="story" src="https://th.bing.com/th/id/OIP.GlXqxcR9EmviN5kuwaUsMQHaIB?w=186&h=202&c=7&r=0&o=5&dpr=1.6&pid=1.7"></ion-img>
+    </ion-avatar>
+  </ion-col>
+  <ion-col size="3">
+    <ion-avatar>
+      <ion-img class="story" src="https://th.bing.com/th/id/OIP.l1kkQOprIOV7jF6558kfGQHaLH?w=186&h=279&c=7&r=0&o=5&dpr=1.6&pid=1.7"></ion-img>
+    </ion-avatar>
+  </ion-col>
+  <ion-col size="3">
+    <ion-avatar>
+      <ion-img class="story" src="https://th.bing.com/th/id/OIP.qbkfsNc_YEfMtW4UsBAkngHaIJ?w=186&h=205&c=7&r=0&o=5&dpr=1.6&pid=1.7"></ion-img>
+    </ion-avatar>
+  </ion-col>
+</ion-row>
+  <!--posts tags tabs-->
+  <app-tabs></app-tabs>
+
+</ion-content>
