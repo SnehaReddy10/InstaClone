@@ -1,0 +1,46 @@
+ion-toolbar{
+    height: 55px;
+    padding-right: 20px;
+    ion-img{
+        margin-left: 10px;
+        margin-top: 15px;
+    }
+    ion-title{
+        padding-left: 0%;
+        margin-left: 0%;
+    }
+}
+
+h5{
+    font-weight: bold;
+    font-family:cursive;
+}
+
+.postPic{
+    height: 270px;
+}
+
+.postIcons{
+    height: 30px;
+    width: 30px;
+    font-weight: bold;
+}
+
+ion-content{
+    font-family:cursive;
+    height: 480px;
+}
+
+.commentProPic{
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+.commentIcons{
+    margin-top: 0px;
+    padding: 0px;
+}
+

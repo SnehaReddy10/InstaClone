@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <span>Instagram</span> 
+      <ion-icon name="chevron-down-outline" (click)="presentActionSheet()"></ion-icon>
+
+    </ion-title>
+    <ion-icon class="icon-only" slot="end" name="add-circle-outline"></ion-icon>
+    <ion-icon slot="end" class="icon-only" color="dark" name="navigate-outline"></ion-icon>
+    <ion-badge slot="end" class="badge" color="danger">2</ion-badge>
+
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    
+  <app-post></app-post>
+  <app-post></app-post>
+
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "InstaClone",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
