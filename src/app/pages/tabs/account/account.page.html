@@ -1,11 +1,88 @@
 <ion-header>
   <ion-toolbar>
-    <ion-icon name="lock"></ion-icon>
-    <ion-title> _siri_12     <ion-icon name="chevron-down-outline"></ion-icon>
+    <ion-title (click)="presentActionSheet()"> 
+      <ion-icon name="bag-outline"></ion-icon>  
+      _siri_12   
+      <ion-icon name="chevron-down-outline"></ion-icon>
     </ion-title>
+
+    <ion-icon class="icon-only" slot="end" name="add-circle-outline" (click)="create()"></ion-icon>
+    <ion-icon class="icon-only" slot="end" name="reorder-three-outline" (click)="settings()"></ion-icon>
   </ion-toolbar>
-</ion-header>
+</ion-header> 
 
 <ion-content>
+
+  <ion-row>
+    <ion-col size="3">
+      <ion-avatar>
+        <ion-img src="https://th.bing.com/th/id/OIP.1moOVABLsAl172i_UsaCMQHaF5?pid=ImgDet&rs=1"></ion-img>
+      </ion-avatar>
+    </ion-col>
+    <ion-col size="3" class="ion-text-center">
+      <h3>0</h3>
+      <ion-label>Posts</ion-label>
+    </ion-col>
+    <ion-col size="3" class="ion-text-center">
+      <h3>54</h3>
+      <ion-label>Followers</ion-label>
+    </ion-col>
+    <ion-col size="3" class="ion-text-center">
+      <h3>64</h3>
+      <ion-label>Following</ion-label>
+    </ion-col>
+  </ion-row>
+
+  <ion-label>
+    _siri_12 <br>
+    Abnormal
+  </ion-label>
+
+  <ion-buttons class="ion-margin-top ion-margin-bottom">
+    <ion-button class="editProfileBtn">Edit profile</ion-button>
+    <ion-button class="addFriendBtn"> 
+      <ion-icon name="person-add"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+
+  <ion-label class="discoverPeople"> Discover people</ion-label>
+  <ion-row >
+    <ion-col class="ion-no-padding">
+      <app-people></app-people>
+    </ion-col>
+    <ion-col class="ion-no-padding">
+      <app-people></app-people>
+    </ion-col>
+  </ion-row>
+
+  <p>  
+    <span>Story highlights</span> <br>
+    Keep your favorite stories on your profile
+  </p>
+
+  <ion-row>
+    <ion-col size="3">
+      <ion-avatar>
+        <ion-img style="background-color: white;" src="assets/imgs/add.png"></ion-img>
+      </ion-avatar>
+    </ion-col>
+    <ion-col size="3">
+      <ion-avatar>
+        <ion-img></ion-img>
+      </ion-avatar>
+    </ion-col>
+    <ion-col size="3">
+      <ion-avatar>
+        <ion-img></ion-img>
+      </ion-avatar>
+    </ion-col>
+    <ion-col size="3">
+      <ion-avatar>
+        <ion-img></ion-img>
+      </ion-avatar>
+    </ion-col>
+  </ion-row>
+
+  <app-tabs></app-tabs>
 
 </ion-content>
