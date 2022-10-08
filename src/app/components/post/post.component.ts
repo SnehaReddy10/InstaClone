@@ -8,6 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class PostComponent implements OnInit {
   
   liked: boolean = false;
+  bookmarked: boolean = false;
+
+  bookmark: any = {
+    name: 'bookmark-outline'
+  }
   img: {
     imgSrc: 'https://th.bing.com/th/id/OIP.1moOVABLsAl172i_UsaCMQHaF5?pid=ImgDet&rs=1'
   };
@@ -29,6 +34,17 @@ export class PostComponent implements OnInit {
       this.liked = false;
       this.heart.name = 'heart-outline',
       this.heart.color = 'dark'
+    }
+   
+  }
+
+  addToBookmarks(){
+    if(!this.bookmarked){
+      this.bookmarked = true;
+      this.bookmark.name = 'bookmark'
+    }else{
+      this.bookmarked = false;
+      this.bookmark.name = 'bookmark-outline'
     }
    
   }

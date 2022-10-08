@@ -28,7 +28,7 @@
     </ion-col>
   </ion-row>
   <ion-col size="2" slot="end">
-    <ion-icon class="postIcons" name="bookmark-outline"></ion-icon>
+    <ion-icon class="postIcons" [name]="bookmark.name" color="dark" (click)="addToBookmarks()"></ion-icon>
   </ion-col></ion-item>
 
   <p class="ion-no-margin">Liked by <span style="font-weight: bold;">goalkeeper</span> and <span style="font-weight: bold;">others</span></p>
