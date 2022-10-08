@@ -30,6 +30,10 @@ const routes: Routes = [
   {
     path: 'message-requests',
     loadChildren: () => import('./pages/message-requests/message-requests.module').then( m => m.MessageRequestsPageModule)
+  },
+  {
+    path: 'follow-requests',
+    loadChildren: () => import('./pages/follow-requests/follow-requests.module').then( m => m.FollowRequestsPageModule)
   }
 ];
 
