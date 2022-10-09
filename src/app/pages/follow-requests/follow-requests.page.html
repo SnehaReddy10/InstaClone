@@ -4,94 +4,42 @@
 
     <ion-title>Follow-requests</ion-title>
 
-    <ion-label slot="end">Manage</ion-label>
+    <ion-label (click)="manageRequests()" slot="end">Manage</ion-label>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 <ion-list lines="none">
-    <ion-item>
+    <ion-item *ngFor="let user of requests">
       <ion-avatar slot="start">
-        <ion-img src="https://th.bing.com/th/id/OIP.1moOVABLsAl172i_UsaCMQHaF5?pid=ImgDet&rs=1"></ion-img>
+        <ion-img [src]="user?.profilePic"></ion-img>
       </ion-avatar>
       <p class="ion-text-wrap">
-        <span style="font-weight: bold;"> ahalya_21 </span>
+        <span style="font-weight: bold;" (click)="showUserAccount(user)"> {{user?.username}} </span>
       </p>
       <ion-buttons slot="end">
-        <ion-button class="confirmBtn">Confirm</ion-button>
-        <ion-button class="deleteBtn">Delete</ion-button>
+        <ion-button (click)="addfriend(user)" class="confirmBtn">Confirm</ion-button>
+        <ion-button (click)="deleteRequest(user)" class="deleteBtn">Delete</ion-button>
       </ion-buttons>
     </ion-item>
-    <ion-item>
-      <ion-avatar slot="start">
-        <ion-img src="https://th.bing.com/th/id/OIP.1moOVABLsAl172i_UsaCMQHaF5?pid=ImgDet&rs=1"></ion-img>
-      </ion-avatar>
-      <p class="ion-text-wrap">
-        <span style="font-weight: bold;"> siri </span><br>
-        siri_12
-      </p>
-      <ion-buttons slot="end">
-        <ion-button class="confirmBtn">Confirm</ion-button>
-        <ion-button class="deleteBtn">Delete</ion-button>
-      </ion-buttons>
-    </ion-item>
-
-    <ion-item>
-      <ion-avatar slot="start">
-        <ion-img src="https://th.bing.com/th/id/OIP.1moOVABLsAl172i_UsaCMQHaF5?pid=ImgDet&rs=1"></ion-img>
-      </ion-avatar>
-      <p class="ion-text-wrap">
-        <span style="font-weight: bold;"> prathima_reddie </span>
-      </p>
-      <ion-buttons slot="end">
-        <ion-button class="confirmBtn">Confirm</ion-button>
-        <ion-button class="deleteBtn">Delete</ion-button>
-      </ion-buttons>
-    </ion-item>
-
   </ion-list>
 
   <p class="seeAll">See all (21)</p>
   <h6>Suggestions for you</h6>
   <ion-list lines="none">
-    <ion-item>
+    <ion-item *ngFor="let suggestedUser of suggestedUsers">
       <ion-avatar slot="start">
-        <ion-img src="https://th.bing.com/th/id/OIP.1moOVABLsAl172i_UsaCMQHaF5?pid=ImgDet&rs=1"></ion-img>
+        <ion-img [src]="suggestedUser?.profilePic"></ion-img>
       </ion-avatar>
       <p class="ion-text-wrap">
-        <span style="font-weight: bold;"> ahalya_21 </span>
+        <span style="font-weight: bold;"> {{suggestedUser?.username}} </span>
       </p>
       <ion-buttons slot="end">
-        <ion-button class="confirmBtn">Follow</ion-button>
-        <ion-icon name="close-outline"></ion-icon>
+        <ion-button (click)="sendRequest(suggestedUser)" class="confirmBtn">Follow</ion-button>
+        <ion-icon (click)="removeRequest(suggestedUser)" name="close-outline"></ion-icon>
       </ion-buttons>
     </ion-item>
-    <ion-item>
-      <ion-avatar slot="start">
-        <ion-img src="https://th.bing.com/th/id/OIP.1moOVABLsAl172i_UsaCMQHaF5?pid=ImgDet&rs=1"></ion-img>
-      </ion-avatar>
-      <p class="ion-text-wrap">
-        <span style="font-weight: bold;"> siri </span><br>
-        siri_12
-      </p>
-      <ion-buttons slot="end">
-        <ion-button class="confirmBtn">Follow</ion-button>
-        <ion-icon name="close-outline"></ion-icon>
-      </ion-buttons>
-    </ion-item>
-
-    <ion-item>
-      <ion-avatar slot="start">
-        <ion-img src="https://th.bing.com/th/id/OIP.1moOVABLsAl172i_UsaCMQHaF5?pid=ImgDet&rs=1"></ion-img>
-      </ion-avatar>
-      <p class="ion-text-wrap">
-        <span style="font-weight: bold;"> prathima_reddie </span>
-      </p>
-      <ion-buttons slot="end">
-        <ion-button class="confirmBtn">Follow</ion-button>
-        <ion-icon name="close-outline"></ion-icon>
-      </ion-buttons>
-    </ion-item>
+   
 
   </ion-list>
 

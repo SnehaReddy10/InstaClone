@@ -8,7 +8,7 @@ import { NavController } from '@ionic/angular';
 })
 export class TabsMessagesComponent implements OnInit {
 
-  chat: boolean = false;
+  chat: boolean = true;
   calls: boolean = false;
 
   constructor(private navCtrl: NavController) { }

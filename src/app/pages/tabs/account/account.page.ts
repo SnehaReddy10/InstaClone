@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActionSheetController } from '@ionic/angular';
+import { ApiService } from 'src/app/services/api/api.service';
 
 @Component({
   selector: 'app-account',
@@ -9,10 +10,18 @@ import { ActionSheetController } from '@ionic/angular';
 export class AccountPage implements OnInit {
 
   result: any;
+  profile: any;
+  suggestedPeople: any[] = [];
+  highlights: any[] = [];
 
-  constructor(private actionSheetCtrl: ActionSheetController) { }
+  constructor(
+    private actionSheetCtrl: ActionSheetController,
+    private api: ApiService) { }
 
   ngOnInit() {
+    this.profile = this.api.profile;
+    this.suggestedPeople = this.profile.suggestedPeople;
+    this.highlights = this.api.profile.highLights;
   }
 
   async presentActionSheet() {

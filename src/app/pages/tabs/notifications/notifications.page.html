@@ -3,7 +3,7 @@
   <h2>Notifications</h2>
 
   <!--friend requests-->
-  <ion-item button (click)="getRequests()" lines="none">
+  <ion-item button (click)="openRequests()" lines="none">
     <ion-avatar slot="start">
       <ion-img src="https://th.bing.com/th/id/OIP.1moOVABLsAl172i_UsaCMQHaF5?pid=ImgDet&rs=1"></ion-img>
     </ion-avatar>
@@ -24,8 +24,8 @@
         requested to follow you. 4d
       </p>
       <ion-buttons slot="end">
-        <ion-button class="confirmBtn">Confirm</ion-button>
-        <ion-button class="deleteBtn">Delete</ion-button>
+        <ion-button (click)="addfriend(user)" class="confirmBtn">Confirm</ion-button>
+        <ion-button (click)="deleteRequest(user)" class="deleteBtn">Delete</ion-button>
       </ion-buttons>
     </ion-item>
     <ion-item>

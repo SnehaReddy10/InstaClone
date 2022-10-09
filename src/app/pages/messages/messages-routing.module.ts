@@ -6,7 +6,10 @@ import { MessagesPage } from './messages.page';
 const routes: Routes = [
   {
     path: '',
-    component: MessagesPage
+    component: MessagesPage,
+    children: [
+      
+    ]
   }
 ];
 

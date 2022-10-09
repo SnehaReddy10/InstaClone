@@ -29,4 +29,8 @@ export class CommentsPage implements OnInit {
       this.heart.color = 'dark'
     }
   }
+
+  likeComment(){
+    console.log('liked comment');
+  }
 }

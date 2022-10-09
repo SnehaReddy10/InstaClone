@@ -16,28 +16,21 @@
 <ion-content>
     
   <!-- stories -->
-  <ion-row class="ion-margin-top">
-    <ion-col size="3">
+  <div class="horizontal-scroll">
+    <ion-row nowrap class="ion-margin-top">
+      <ion-col size="3">
+        
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div class="horizontal-scroll">
+    <ion-chip *ngFor="let user of users">
       <ion-avatar>
-        <ion-img class="story" src="https://th.bing.com/th/id/OIP.WB62eaUDV-0wrQ11RAgexgHaJQ?w=186&h=233&c=7&r=0&o=5&dpr=1.6&pid=1.7"></ion-img>
+        <ion-img class="story" [src]="user?.profilePic"></ion-img>
       </ion-avatar>
-    </ion-col>
-    <ion-col size="3">
-      <ion-avatar>
-        <ion-img class="story" src="https://th.bing.com/th/id/OIP.GlXqxcR9EmviN5kuwaUsMQHaIB?w=186&h=202&c=7&r=0&o=5&dpr=1.6&pid=1.7"></ion-img>
-      </ion-avatar>
-    </ion-col>
-    <ion-col size="3">
-      <ion-avatar>
-        <ion-img class="story" src="https://th.bing.com/th/id/OIP.l1kkQOprIOV7jF6558kfGQHaLH?w=186&h=279&c=7&r=0&o=5&dpr=1.6&pid=1.7"></ion-img>
-      </ion-avatar>
-    </ion-col>
-    <ion-col size="3">
-      <ion-avatar>
-        <ion-img class="story" src="https://th.bing.com/th/id/OIP.qbkfsNc_YEfMtW4UsBAkngHaIJ?w=186&h=205&c=7&r=0&o=5&dpr=1.6&pid=1.7"></ion-img>
-      </ion-avatar>
-    </ion-col>
-  </ion-row>
+    </ion-chip>
+  </div>
 
   <hr>
   <!--posts-->
