@@ -32,4 +32,9 @@ export class NotificationsPage implements OnInit {
     console.log('delete request', user);
     this.api.profile.requests.pop(user.userId);
   }
+
+  followUser(user){
+    console.log(user);
+    this.api.profile.following.push(user.userId); 
+  }
 }

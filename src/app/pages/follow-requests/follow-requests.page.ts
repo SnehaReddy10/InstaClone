@@ -33,6 +33,7 @@ export class FollowRequestsPage implements OnInit {
     console.log('send request');
     this.api.profile.sentRequests.push(user.userId);
     this.api.profile.suggestedPeople.pop(user.userId);
+    this.api.profile.following.push(user.userId);
   }
 
   addfriend(user){
