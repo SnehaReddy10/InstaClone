@@ -43,5 +43,21 @@ ion-avatar{
     transform: translateX(-48%);
 }
 
+.storyContent{
+    height: 750px;
+    width: 250px;
+    transform: scale(160%);
+}
+
+ng-template{
+    transform: translateY(-50%);
+}
+
+ion-popover{
+    height: 750px;
+    width: 250px;
+}
+
+
 
 

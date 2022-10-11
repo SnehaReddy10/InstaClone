@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/account"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar color="light" style="background-color: medium;"></ion-searchbar>
+
+  <ion-list>
+    <ion-item lines="none" (click)="navigateToFollowNInviteFriends()">
+      <ion-icon name="person-add-outline"></ion-icon>
+      <ion-label>Follow and Invite Friends</ion-label>
+    </ion-item>
+    <ion-item lines="none" (click)="navigateToNotifications()">
+      <ion-icon name="notifications-outline"></ion-icon>
+      <ion-label>Notifications</ion-label>
+    </ion-item>
+    <ion-item lines="none" (click)="navigateToPrivacy()">
+      <ion-icon name="lock-closed-outline"></ion-icon>
+      <ion-label>Privacy</ion-label>
+    </ion-item>
+    <ion-item lines="none" (click)="navigateToSecurity()">
+      <ion-icon name="people-outline"></ion-icon>
+      <ion-label>Supervision</ion-label>
+    </ion-item>
+    <ion-item lines="none" (click)="navigateToSecurity()">
+      <ion-icon name="checkmark-circle-outline"></ion-icon>
+      <ion-label>Security</ion-label>
+    </ion-item>
+    <ion-item lines="none" (click)="navigateToAds()">
+      <ion-icon name="megaphone-outline"></ion-icon>
+      <ion-label>Ads</ion-label>
+    </ion-item>
+    <ion-item lines="none" (click)="navigateToAccount()">
+      <ion-icon name="person-circle-outline"></ion-icon>
+      <ion-label>Account</ion-label>
+    </ion-item>
+    <ion-item lines="none" (click)="navigateToHelp()">
+      <ion-icon name="help-buoy-outline"></ion-icon>
+      <ion-label>Help</ion-label>
+    </ion-item>
+    <ion-item lines="none" (click)="navigateToAbout()">
+      <ion-icon name="information-circle-outline"></ion-icon>
+      <ion-label>About</ion-label>
+    </ion-item>
+    <ion-item lines="none" (click)="navigateToThemes()">
+      <ion-icon name="color-palette-outline"></ion-icon>
+      <ion-label>Theme</ion-label>
+    </ion-item>
+    
+  </ion-list>
+
+  <ion-item lines="none">
+    <ion-label class="meta">
+      <ion-icon color="primary" name="infinite-outline"></ion-icon>
+      Meta
+    </ion-label>
+  </ion-item>
+
+  <ion-grid>
+    <ion-row>
+      <ion-label color="primary"> Accounts Center </ion-label>
+    </ion-row>
+    <ion-row>
+      <ion-note> Control settings for connected experiences accross Instagram, the Facebook app and Messenger, including story and post sharing and loggin in.</ion-note>
+    </ion-row>
+    <ion-row>
+      Logins
+    </ion-row>
+    <ion-row>
+      <ion-label color="primary"> Add account </ion-label>
+    </ion-row>
+    <ion-row>
+      <ion-label color="primary"> Log out </ion-label>
+    </ion-row>
+  </ion-grid>
+  
+</ion-content>

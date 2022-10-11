@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ActionSheetController } from '@ionic/angular';
 import { ApiService } from 'src/app/services/api/api.service';
 
@@ -16,6 +17,7 @@ export class AccountPage implements OnInit {
 
   constructor(
     private actionSheetCtrl: ActionSheetController,
+    private router: Router,
     private api: ApiService) { }
 
   ngOnInit() {
@@ -114,6 +116,9 @@ export class AccountPage implements OnInit {
           role: 'destructive',
           data: {
             action: 'delete',
+          },
+          handler: () => {
+            this.router.navigateByUrl('settings');
           },
           icon: 'settings-outline',
         },

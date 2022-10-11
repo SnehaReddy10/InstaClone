@@ -34,6 +34,10 @@ const routes: Routes = [
   {
     path: 'follow-requests',
     loadChildren: () => import('./pages/follow-requests/follow-requests.module').then( m => m.FollowRequestsPageModule)
+  },
+  {
+    path: 'settings',
+    loadChildren: () => import('./pages/settings/settings.module').then( m => m.SettingsPageModule)
   }
 ];
 

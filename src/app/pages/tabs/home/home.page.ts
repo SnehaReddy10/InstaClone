@@ -9,6 +9,7 @@ import { ApiService } from 'src/app/services/api/api.service';
 })
 export class HomePage implements OnInit {
 
+  isOpen = false;
   result: any;
   items: any[] = [
     {
@@ -19,6 +20,7 @@ export class HomePage implements OnInit {
     }
   ];
   users: any[] = [];
+  storyImg: any;
 
   constructor(
     private actionSheetCtrl: ActionSheetController,
@@ -57,6 +59,12 @@ export class HomePage implements OnInit {
 
   navigateToMessages(){
 
+  }
+
+  presentPopover(event){
+    console.log(event);
+    this.isOpen = true;
+    this.storyImg = event.profilePic;
   }
 
 }

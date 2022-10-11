@@ -17,20 +17,18 @@
     
   <!-- stories -->
   <div class="horizontal-scroll">
-    <ion-row nowrap class="ion-margin-top">
-      <ion-col size="3">
-        
-      </ion-col>
-    </ion-row>
-  </div>
-
-  <div class="horizontal-scroll">
-    <ion-chip *ngFor="let user of users">
+    <ion-chip *ngFor="let user of users" (click)="presentPopover(user)">
       <ion-avatar>
         <ion-img class="story" [src]="user?.profilePic"></ion-img>
       </ion-avatar>
     </ion-chip>
   </div>
+
+  <ion-popover class="ion-no-padding" #popover [isOpen]="isOpen" (didDismiss)="isOpen = false">
+    <ng-template class="ion-no-padding">
+        <ion-img class="storyContent ion-no-padding" [src]="storyImg"></ion-img>
+    </ng-template>
+  </ion-popover>
 
   <hr>
   <!--posts-->
