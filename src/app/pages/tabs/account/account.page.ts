@@ -9,21 +9,27 @@ import { ApiService } from 'src/app/services/api/api.service';
   styleUrls: ['./account.page.scss'],
 })
 export class AccountPage implements OnInit {
-
   result: any;
   profile: any;
-  suggestedPeople: any[] = [];
+  suggestedPeople: any;
   highlights: any[] = [];
+  currentUser: any;
+  userHighlights: any;
 
   constructor(
     private actionSheetCtrl: ActionSheetController,
     private router: Router,
-    private api: ApiService) { }
+    private api: ApiService
+  ) {
+    this.getCurrentUser();
+    this.getUserHighlights();
+    this.getUsersRecommendedPeople();
+  }
 
   ngOnInit() {
-    this.profile = this.api.profile;
-    this.suggestedPeople = this.profile.suggestedPeople;
-    this.highlights = this.api.profile.highLights;
+    // this.profile = this.api.profile;
+    // this.suggestedPeople = this.profile.suggestedPeople;
+    // this.highlights = this.api.profile.highLights;
   }
 
   async presentActionSheet() {
@@ -42,8 +48,8 @@ export class AccountPage implements OnInit {
           data: {
             action: 'share',
           },
-          icon: 'add-circle-outline'
-        }
+          icon: 'add-circle-outline',
+        },
       ],
     });
 
@@ -76,29 +82,29 @@ export class AccountPage implements OnInit {
           data: {
             action: 'share',
           },
-          icon: 'add-circle-outline'
+          icon: 'add-circle-outline',
         },
         {
           text: 'Story Highlight',
           data: {
             action: 'share',
           },
-          icon: 'heart-circle-outline'
+          icon: 'heart-circle-outline',
         },
         {
           text: 'Live',
           data: {
             action: 'share',
           },
-          icon: 'radio-outline'
+          icon: 'radio-outline',
         },
         {
           text: 'Guide',
           data: {
             action: 'share',
           },
-          icon: 'book'
-        }
+          icon: 'book',
+        },
       ],
     });
 
@@ -127,7 +133,7 @@ export class AccountPage implements OnInit {
           data: {
             action: 'share',
           },
-          icon: 'archive-outline'
+          icon: 'archive-outline',
         },
         {
           text: 'Your Activity',
@@ -136,49 +142,56 @@ export class AccountPage implements OnInit {
             action: 'delete',
           },
           icon: 'timer-outline',
-        },{
+        },
+        {
           text: 'QR Code',
           role: 'destructive',
           data: {
             action: 'delete',
           },
           icon: 'qr-code-outline',
-        },{
+        },
+        {
           text: 'Saved',
           role: 'destructive',
           data: {
             action: 'delete',
           },
           icon: 'bookmark-outline',
-        },{
+        },
+        {
           text: 'Digital collectibles',
           role: 'destructive',
           data: {
             action: 'delete',
           },
           icon: 'checkmark-circle-outline',
-        },{
+        },
+        {
           text: 'Close Friends',
           role: 'destructive',
           data: {
             action: 'delete',
           },
           icon: 'list-outline',
-        },{
+        },
+        {
           text: 'Favorites',
           role: 'destructive',
           data: {
             action: 'delete',
           },
           icon: 'star-outline',
-        },{
+        },
+        {
           text: 'COVID-19 Information Center',
           role: 'destructive',
           data: {
             action: 'delete',
           },
           icon: 'heart-circle-outline',
-        },{
+        },
+        {
           text: 'Update messaging',
           role: 'destructive',
           data: {
@@ -195,4 +208,20 @@ export class AccountPage implements OnInit {
     this.result = JSON.stringify(result, null, 2);
   }
 
+  async getCurrentUser() {
+    await this.api.getCurrentUser().then((x) => (this.currentUser = x));
+    console.log(this.currentUser);
+  }
+
+  async getUserHighlights() {
+    await this.api.getUserHighlights().then((x) => (this.userHighlights = x));
+    console.log('stories', this.userHighlights);
+  }
+
+  async getUsersRecommendedPeople() {
+    await this.api
+      .getUsersRecommendedPeople()
+      .then((x) => (this.suggestedPeople = x));
+    console.log('suggestedPeople', this.suggestedPeople);
+  }
 }

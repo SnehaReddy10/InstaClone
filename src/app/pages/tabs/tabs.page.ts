@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/services/api/api.service';
 
 @Component({
   selector: 'app-tabs',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tabs.page.scss'],
 })
 export class TabsPage implements OnInit {
+  currentUser: any;
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private api: ApiService) {
+    this.getCurrentUser();
   }
 
+  ngOnInit() {}
+
+  async getCurrentUser() {
+    await this.api.getCurrentUser().then((x) => (this.currentUser = x));
+    console.log(this.currentUser);
+  }
 }

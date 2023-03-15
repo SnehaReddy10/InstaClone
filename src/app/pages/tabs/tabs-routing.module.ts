@@ -10,32 +10,45 @@ const routes: Routes = [
     children: [
       {
         path: 'home',
-        loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+        loadChildren: () =>
+          import('./home/home.module').then((m) => m.HomePageModule),
       },
       {
         path: 'search',
-        loadChildren: () => import('./search/search.module').then( m => m.SearchPageModule)
+        loadChildren: () =>
+          import('./search/search.module').then((m) => m.SearchPageModule),
       },
       {
         path: 'videocam',
-        loadChildren: () => import('./videocam/videocam.module').then( m => m.VideocamPageModule)
+        loadChildren: () =>
+          import('./videocam/videocam.module').then(
+            (m) => m.VideocamPageModule
+          ),
       },
       {
         path: 'notifications',
-        loadChildren: () => import('./notifications/notifications.module').then( m => m.NotificationsPageModule)
+        loadChildren: () =>
+          import('./notifications/notifications.module').then(
+            (m) => m.NotificationsPageModule
+          ),
       },
       {
         path: 'account',
-        loadChildren: () => import('./account/account.module').then( m => m.AccountPageModule)
+        loadChildren: () =>
+          import('./account/account.module').then((m) => m.AccountPageModule),
+      },
+      {
+        path: 'posts',
+        loadChildren: () =>
+          import('../posts/posts.module').then((m) => m.PostsPageModule),
       },
       {
         path: '',
         redirectTo: 'home',
-        pathMatch: 'full'
-      }
-    ]
+        pathMatch: 'full',
+      },
+    ],
   },
-  
 ];
 
 @NgModule({

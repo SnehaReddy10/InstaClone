@@ -15,91 +15,30 @@
   <!--week notifications-->
   <ion-list lines="none">
     <ion-list-header> This Week</ion-list-header>
-    <ion-item>
-      <ion-avatar slot="start">
-        <ion-img src="https://th.bing.com/th/id/OIP.1moOVABLsAl172i_UsaCMQHaF5?pid=ImgDet&rs=1"></ion-img>
-      </ion-avatar>
-      <p class="ion-text-wrap">
-        <span style="font-weight: bold;"> ahalya_21 </span>
-        requested to follow you. 4d
-      </p>
-      <ion-buttons slot="end">
-        <ion-button (click)="addfriend(user)" class="confirmBtn">Confirm</ion-button>
-        <ion-button (click)="deleteRequest(user)" class="deleteBtn">Delete</ion-button>
-      </ion-buttons>
-    </ion-item>
-    <ion-item>
-      <ion-avatar slot="start">
-        <ion-img src="https://th.bing.com/th/id/OIP.1moOVABLsAl172i_UsaCMQHaF5?pid=ImgDet&rs=1"></ion-img>
-      </ion-avatar>
-      <p class="ion-text-wrap">
-        <span style="font-weight: bold;"> siri </span>
-        is on instagram. 4d
-      </p>
-      <ion-buttons slot="end">
-        <ion-button class="confirmBtn">Follow</ion-button>
-      </ion-buttons>
-    </ion-item>
-
-    <ion-item>
-      <ion-avatar slot="start">
-        <ion-img src="https://th.bing.com/th/id/OIP.1moOVABLsAl172i_UsaCMQHaF5?pid=ImgDet&rs=1"></ion-img>
-      </ion-avatar>
-      <p class="ion-text-wrap">
-        <span style="font-weight: bold;"> prathima-reddie </span>
-        is on instagram. 4d
-      </p>
-      <ion-buttons slot="end">
-        <ion-button class="confirmBtn" (click)="followUser(user)">Follow</ion-button>
-      </ion-buttons>
-    </ion-item>
-
-  </ion-list>
-
-  <!--month notifications-->
-  <ion-list lines="none">
-    <ion-list-header> This Month</ion-list-header>
-
-    <ion-item>
-      <ion-avatar slot="start">
-        <ion-img src="https://th.bing.com/th/id/OIP.1moOVABLsAl172i_UsaCMQHaF5?pid=ImgDet&rs=1"></ion-img>
-      </ion-avatar>
-      <p class="ion-text-wrap">
-        <span style="font-weight: bold;"> siri </span>
-        is on instagram. 4d
-      </p>
-      <ion-buttons slot="end">
-        <ion-button class="confirmBtn">Follow</ion-button>
-      </ion-buttons>
-    </ion-item>
-
-    <ion-item>
-      <ion-avatar slot="start">
-        <ion-img src="https://th.bing.com/th/id/OIP.1moOVABLsAl172i_UsaCMQHaF5?pid=ImgDet&rs=1"></ion-img>
-      </ion-avatar>
-      <p class="ion-text-wrap">
-        <span style="font-weight: bold;"> ahalya_21 </span>
-        requested to follow you. 4d
-      </p>
-      <ion-buttons slot="end">
-        <ion-button class="confirmBtn">Confirm</ion-button>
-        <ion-button class="deleteBtn">Delete</ion-button>
-      </ion-buttons>
-    </ion-item>
-
-    <ion-item>
-      <ion-avatar slot="start">
-        <ion-img src="https://th.bing.com/th/id/OIP.1moOVABLsAl172i_UsaCMQHaF5?pid=ImgDet&rs=1"></ion-img>
-      </ion-avatar>
-      <p class="ion-text-wrap">
-        <span style="font-weight: bold;"> prathima-reddie </span>
-        is on instagram. 4d
-      </p>
-      <ion-buttons slot="end">
-        <ion-button class="confirmBtn">Follow</ion-button>
-      </ion-buttons>
-    </ion-item>
-    
-
+    <div *ngFor="let notification of notifications">
+      <ion-item *ngIf="!notification.like">
+        <ion-avatar slot="start">
+          <ion-img [src]="notification.profile_pic"></ion-img>
+        </ion-avatar>
+        <p class="ion-text-wrap">
+          {{notification.message}}
+        </p>
+        <ion-buttons slot="end">
+          <ion-button (click)="addfriend(user)" class="confirmBtn">Confirm</ion-button>
+          <ion-button (click)="deleteRequest(user)" class="deleteBtn">Delete</ion-button>
+        </ion-buttons>
+      </ion-item>
+      <ion-item *ngIf="notification.like">
+        <ion-avatar slot="start">
+          <ion-img [src]="notification.profile_pic"></ion-img>
+        </ion-avatar>
+        <p class="ion-text-wrap">
+          {{notification.message}}
+        </p>
+        <ion-buttons slot="end">
+          <ion-button class="confirmBtn">Reply</ion-button>
+        </ion-buttons>
+      </ion-item>
+    </div>
   </ion-list>
 </ion-content>

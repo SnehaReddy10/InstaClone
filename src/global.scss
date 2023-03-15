@@ -35,3 +35,11 @@
 ion-content{
     font-family: cursive;
 }
+
+.confirmBtn{
+    background-color: var(--ion-color-primary);
+    color: white;
+    border-radius: 5px;
+    font-family: cursive;
+    text-transform: capitalize;
+}

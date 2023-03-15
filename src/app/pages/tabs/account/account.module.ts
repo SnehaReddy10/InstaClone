@@ -15,8 +15,8 @@ import { ComponentsModule } from 'src/app/components/components.module';
     FormsModule,
     IonicModule,
     AccountPageRoutingModule,
-    ComponentsModule
+    ComponentsModule,
   ],
-  declarations: [AccountPage]
+  declarations: [AccountPage],
 })
 export class AccountPageModule {}

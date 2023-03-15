@@ -5,9 +5,9 @@ import { UserProfilePage } from './user-profile.page';
 
 const routes: Routes = [
   {
-    path: '',
-    component: UserProfilePage
-  }
+    path: ':id',
+    component: UserProfilePage,
+  },
 ];
 
 @NgModule({
